@@ -111,3 +111,23 @@ body {
     color: #fff;
     font-size: 0.875rem;
 }
+
+
+/* Logo and Business Name Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between the logo and text */
+}
+
+.logo-image {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+}
+
+.business-name {
+    font-size: 1.5rem; /* Adjust text size */
+    font-weight: bold;
+    color: #fff; /* Adjust for your theme */
+}
+
