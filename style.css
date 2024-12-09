@@ -121,8 +121,9 @@ body {
 }
 
 .logo-image {
-    height: 50px; /* Adjust as needed */
-    width: auto;
+    height: 1.5em; /* Matches the font size of the text */
+    width: auto;   /* Maintains the aspect ratio */
+    vertical-align: middle; /* Aligns the logo with the text */
 }
 
 .business-name {
@@ -131,3 +132,8 @@ body {
     color: #fff; /* Adjust for your theme */
 }
 
+
+
+html {
+    scroll-behavior: smooth;
+}
