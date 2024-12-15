@@ -7,7 +7,7 @@
 
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
 }
@@ -22,7 +22,8 @@ body {
 .site-header {
     background: #222;
     color: #fff;
-    padding: 1rem 0;
+/*    padding: 1rem 0;*/
+    padding: 0;
 }
 
 .site-header .container {
@@ -137,3 +138,20 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+.grid-item {
+    position: relative; /* Ensure ::before is positioned relative to the grid item */
+}
+
+/*.grid-item::before {
+    content: ""; /* Adds a custom square bullet */
+    width: 10px; /* Size of the square */
+    height: 10px;
+    background-color: #333; /* Color of the bullet */
+    position: absolute;
+    top: 50%; /* Align vertically */
+    left: -20px; /* Offset horizontally to the left of the item */
+    transform: translateY(-50%); /* Centers the bullet vertically */
+    border-radius: 2px; /* Optional: Slightly round the corners for a modern look */
+}*/
+

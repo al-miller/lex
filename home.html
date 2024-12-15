@@ -1,70 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katerina Miller</title>
     <link rel="stylesheet" href="style.css">
+    <<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="site-header">
-    <div class="container">
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo" class="logo-image">
-            <span class="business-name">K.Miller Law</span>
+    <div style="background: url('images/toronto2.jpg') no-repeat center center/cover; height: 100vh; display: grid; grid-template-rows: auto 90vh;">
+        <!-- Navigation Panel -->
+        <div style="display: grid; grid-template-columns: 2fr 3fr; align-items: start; background-color: transparent; position: relative;">
+            <!-- Left Column -->
+            <div style="background-color: rgba(0, 48, 91, 0.8); height: 100%; position: relative; padding: 1rem;">
+                <!-- Logo Positioned Separately at Top-Left -->
+                <div style="position: absolute; top: -6rem; left: -1rem;">
+                    <img src="images/logoWhite.png" alt="Logo" class="logo-image" style="width: 300px; height: 300px; object-fit: contain;">
+                </div>
+                <!-- Buttons Positioned Independently to the Right of Logo -->
+                <div style="position: absolute; top: 1rem; right: 0.5rem; display: flex; gap: 0.5rem; align-items: center;">
+                    <a href="#home" style="text-decoration: none; color: white; font-size: 1rem; padding: 0.5rem 1rem; border-radius: 4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Practice Areas
+                    </a>
+                    <a href="#services" style="text-decoration: none; color: white; font-size: 1rem; padding: 0.5rem 1rem; border-radius: 4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Our Vision
+                    </a>
+                    <a href="#about" style="text-decoration: none; color: white; font-size: 1rem; padding: 0.5rem 1rem; border-radius: 4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        About
+                    </a>
+                    <a href="#contact" style="text-decoration: none; color: white; font-size: 1rem; padding: 0.5rem 1rem; border-radius: 4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Contact
+                    </a>
+                </div>
+            </div>
+            <!-- Right Column with Contact Button -->
+            <div style="display: flex; justify-content: flex-end; align-items: center; position: absolute; top: 1rem; right: 1rem;">
+                <button id="freeConsultationButton" style="padding: 0.5rem 1rem; background-color: #FFDB58; color: black; font-weight:bold; border: none; cursor: pointer; font-size: 1.25rem; border-radius: 20px; white-space: nowrap;">
+                    FREE CONSULTATION
+                </button>
+            </div>
+            <!-- Contact Form Panel -->
+            <div id="contactFormPanel" style="
+        display: none;
+        position: absolute;
+        top: 4rem; /* Adjust to place below the button */
+        right: 1rem;
+        width: 300px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        border-radius: 8px;
+        z-index: 10;
+        ">
+                <form action="https://formsubmit.co/katiabel@gmail.com" method="POST">
+                    <div style="margin-bottom: 1rem;">
+                        <label for="firstName" style="display: block; font-size: 0.9rem; font-weight: bold;">First Name</label>
+                        <input id="firstName" name="firstName" type="text" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="lastName" style="display: block; font-size: 0.9rem; font-weight: bold;">Last Name</label>
+                        <input id="lastName" name="lastName" type="text" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="phone" style="display: block; font-size: 0.9rem; font-weight: bold;">Phone</label>
+                        <input id="phone" name="phone" type="text" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="email" style="display: block; font-size: 0.9rem; font-weight: bold;">Email</label>
+                        <input id="email" name="email" type="email" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="claim" style="display: block; font-size: 0.9rem; font-weight: bold;">About Your Claim</label>
+                        <textarea id="claim" name="claim" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; height: 80px;" required></textarea>
+                    </div>
+                    <button type="submit" style="padding: 0.5rem 1rem; background-color: #FFDB58; color: black; font-weight: bold; border: none; cursor: pointer; font-size: 1rem; border-radius: 4px;">
+                        Submit
+                    </button>
+                </form>
+            </div>
         </div>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#services">PRACTICE AREAS</a></li>
-                <li><a href="#about">OUR VISION</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
+        <!-- Section -->
+        <section id="home" style="display: grid; grid-template-columns: 2fr 3fr; align-items: stretch; padding: 0;">
+            <!-- Left Column -->
+            <div style="color: white; background-color: rgba(0, 48, 91, 0.8); padding: 2rem; height: 100%; display: grid; grid-template-columns: 1fr 2fr; align-items: center;">
+                <div></div>
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left;">
+                    <div style="margin-bottom: 0.5rem; width: 100%;">
+                        <h1 style="font-size: 2.5rem; margin: 0;">TORONTO</h1>
+                    </div>
+                    <div style="margin-bottom: 0.5rem; width: 100%;">
+                        <p style="font-size: 2.5rem; line-height: 1.2; font-weight: 500; margin: 0;">LAW FIRM</p>
+                    </div>
+                    <div style="width: 100%;">
+                        <p style="font-size: 1.2rem; line-height: 1.8; font-weight: 300; margin: 0;">
+                            Specializing in Employment and Disability Law
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column -->
+            <div style="padding: 2rem; text-align: center; height: 100%;">
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;"></h2>
+            </div>
+        </section>
     </div>
-</header>
-
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Business</h1>
-            <p>Your success is our priority.</p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn primary-btn">Get Started</a>
-                <a href="#about" class="btn secondary-btn">Learn More</a>
+    <!-- Header -->
+    <!-- <header class="site-header" style="display: grid; grid-template-columns: 2fr 3fr; height: 100%; background: transparent;">
+        /*Left Column (Empty as Logo is Now in Navigation Panel)*/
+        <div style="background-color: rgba(0, 48, 91, 0.8); height: 100%;"></div>
+        /* Right Column */
+        <div style="display: flex; justify-content: flex-end; align-items: center; padding: 0 1rem;">
+            <nav class="navigation">
+                <ul style="display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0;">
+                    <li><a href="#home" style="color: white; text-decoration: none;">HEADER</a></li>
+                    <li><a href="#services" style="color: white; text-decoration: none;">PRACTICE AREAS</a></li>
+                    <li><a href="#about" style="color: white; text-decoration: none;">OUR VISION</a></li>
+                    <li><a href="#contact" style="color: white; text-decoration: none;">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+    <!-- Section -->
+    <!-- <section id="home" style="display: grid; grid-template-columns: 2fr 3fr; align-items: stretch; padding: 0;">
+        /* Left Column */
+        <div style="color: white; background-color: rgba(0, 48, 91, 0.8); padding: 2rem; height: 100%; display: grid; grid-template-columns: 1fr 2fr; align-items: center;">
+            <div></div>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left;">
+                <div style="margin-bottom: 0.5rem; width: 100%;">
+                    <h1 style="font-size: 2.5rem; margin: 0;">BOUTIQUE</h1>
+                </div>
+                <div style="margin-bottom: 0.5rem; width: 100%;">
+                    <p style="font-size: 2.5rem; line-height: 1.2; font-weight: 500; margin: 0;">LAW FIRM</p>
+                </div>
+                <div style="width: 100%;">
+                    <p style="font-size: 1.2rem; line-height: 1.8; font-weight: 300; margin: 0;">
+                        SSSSpecializing in Commercial Law & Litigation, Insolvency & Fraud
+                    </p>
+                </div>
+            </div>
+        </div>
+        /* Right Column */
+        <div style="padding: 2rem; text-align: center; height: 100%;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;"></h2>
+        </div>
+    </section> -->
+    </div>
+    <section id="services" style="display: grid; grid-template-columns: 2fr 3fr; gap: 2rem; align-items: stretch; padding: 0; gap: 0; ">
+        <!-- Left Column -->
+        <div style="color: white; background-color: rgba(234, 244, 246, 1); padding: 2rem; border-radius: 0; height: 100%; width: 100%; box-sizing: border-box; display: grid; grid-template-columns: 1fr 2fr; align-items: center;">
+            <!-- Empty Section -->
+            <div></div>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left;">
+                <!-- BOUTIQUE -->
+                <div style="margin-bottom: 0.5rem; width: 100%;">
+                    <h1 style="font-size: 2.5rem; margin: 0; color: rgba(0,48,81,1); font-weight: bold;">PRACTICE</h1>
+                </div>
+                <!-- LAW FIRM -->
+                <div style="margin-bottom: 0.5rem; width: 100%;">
+                    <p style="font-size: 2.5rem; line-height: 1.2; margin: 0; color: rgba(0,48,81,1); font-weight: normal;">AREAS</p>
+                </div>
+                <!-- Specializing Text -->
+            </div>
+        </div>
+        <!-- Right Column -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+            <!-- Employment Law -->
+            <div class="grid-item" style="padding: 1rem; border-radius: 8px; text-align: left; font-size: 1.1rem; font-weight: bold; position: relative;">
+                <span style="display: inline-block; width: 10px; height: 10px; background-color: #41b7c4; margin-right: 0.5rem;"></span>
+                <span style="font-weight: bold;">Employment Law</span>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: normal; color: #555;">
+                    Providing legal support for divorce, custody, and more.
+                </p>
+            </div>
+            <!-- Disability Benefits -->
+            <div class="grid-item" style="padding: 1rem; border-radius: 8px; text-align: left; font-size: 1.1rem; font-weight: bold; position: relative;">
+                <span style="display: inline-block; width: 10px; height: 10px; background-color: #41b7c4; margin-right: 0.5rem;"></span>
+                <span style="font-weight: bold;">Disability Benefits</span>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: normal; color: #555;">
+                    Protecting your rights with experienced legal representation.
+                </p>
+            </div>
+            <!-- Human Rights -->
+            <div class="grid-item" style="padding: 1rem; border-radius: 8px; text-align: left; font-size: 1.1rem; font-weight: bold; position: relative;">
+                <span style="display: inline-block; width: 10px; height: 10px; background-color: #41b7c4; margin-right: 0.5rem;"></span>
+                <span style="font-weight: ligboldhter;">Human Rights</span>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: normal; color: #555;">
+                    Helping businesses navigate contracts and compliance.
+                </p>
             </div>
         </div>
     </section>
-
-     <!-- Practice Areas Section -->
-    <section id="services" class="services">
-        <h2>Practice Areas</h2>
-        <ul>
-            <li>Employment</li>
-            <li>Disability Benefits</li>
-            <li>Human Rights</li>
-        </ul>
-    </section>
-
     <!-- Vision Section -->
-    <section id="about" class="about">
-        <h2>Our Vision</h2>
-        <p>At K.Miller Law, we aim to provide exceptional legal services with integrity and compassion. Our goal is to empower clients and deliver results that matter.</p>
+    <!-- <section id="about" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: start; padding: 2rem 1rem;">
+            <div>
+                <img src="images/about.jpg" alt="Our Vision" style="width: 100%; height: auto;">
+            </div>
+            <div>
+                <h2>Our Vision</h2>
+                <p>At K.Miller Law, we aim to provide exceptional legal services with integrity and compassion. Our goal is to empower clients and deliver results that matter.</p>
+            </div>
+        </section> -->
+    <section id="about" style="background-color: rgb(0, 48, 91, 1); color: white; text-align: center; padding: 3rem 1rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; font-weight : normal;">OUR VISION</h2>
+        <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 1rem;">
+            At K.Miller Law, we aim to provide exceptional legal services with integrity and compassion.
+        </p>
+        <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 1rem;">
+            Our goal is to empower clients with legal solutions tailored to their unique needs and deliver results that matter.
+        </p>
+        <p style="font-size: 1.2rem; line-height: 1.8;">
+            Through expertise, dedication, and trust, we strive to build long-lasting relationships with our clients.
+        </p>
     </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>Address: 1234 King Street, Suite 100, Toronto</p>
-        <p>Phone: (416) 277-0366</p>
-        <p>Email: <a href="mailto:info@kmillerlaw.com">info@kmillerlaw.com</a></p>
+    <section id="contact" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: start; padding: 2rem 1rem;">
+        <div>
+            <h2>Contact Us</h2>
+            <p>Address: 1234 King Street, Suite 100, Toronto</p>
+            <p>Phone: (416) 277-0366</p>
+            <p>Email: <a href="mailto:info@kmillerlaw.com">info@kmillerlaw.com</a></p>
+        </div>
+        <div>
+            <img src="images/contact.jpg" alt="Contact Us" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
     </section>
-
     <!-- Footer -->
     <footer class="site-footer">
         <p>© 2024 My Business. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
