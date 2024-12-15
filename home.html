@@ -54,7 +54,7 @@
         border-radius: 8px;
         z-index: 10;
         ">
-                <form action="https://formsubmit.co/katiabel@gmail.com" method="POST">
+                <form id="contactForm">
                     <div style="margin-bottom: 1rem;">
                         <label for="firstName" style="display: block; font-size: 0.9rem; font-weight: bold;">First Name</label>
                         <input id="firstName" name="firstName" type="text" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;" required>
@@ -79,6 +79,10 @@
                         Submit
                     </button>
                 </form>
+                <!-- Success Message -->
+                <div id="thankYouMessage" style="display: none; margin-top: 1rem; font-size: 1.2rem; color: green;">
+                    Thank you for submitting your claim. We will get back to you shortly!
+                </div>
             </div>
         </div>
         <!-- Section -->
