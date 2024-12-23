@@ -320,3 +320,13 @@ html {
   border-radius: 8px; /* Optional: Rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
 }
+
+
+.stars {
+    font-size: 1rem; /* Adjust star size for better visibility */
+    color: #f4a261; /* Golden stars */
+    margin-top: 0.3rem; /* Space between the name and stars */
+    text-align: center; /* Center the stars */
+    display: flex; /* Ensure stars align properly */
+    justify-content: center; /* Center align stars horizontally */
+}
