@@ -18,90 +18,204 @@ body {
     margin: 0 auto;
 }
 
-/* Header */
-.site-header {
-    background: #222;
-    color: #fff;
-/*    padding: 1rem 0;*/
-    padding: 0;
+html {
+    scroll-behavior: smooth;
 }
 
-.site-header .container {
+/* Header */
+.site-header {
+    background: rgba(0, 48, 91, 0.8);
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+    position: relative;
 }
 
-.site-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo-container {
+    position: absolute;
+    top: -6rem;
+    left: -1rem;
 }
 
-.site-header .navigation ul {
-    list-style: none;
+.logo-image {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.navigation {
     display: flex;
     gap: 1rem;
 }
 
-.site-header .navigation a {
+.nav-link {
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: color 0.3s ease, background 0.3s ease;
 }
 
-.site-header .navigation a:hover {
+.nav-link:hover {
     color: #f4a261;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-trigger {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(0, 48, 91, 0.1);
 }
 
 /* Hero Section */
 .hero {
-    background: url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
+    background: url('images/toronto2.jpg') no-repeat center center/cover;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+    display: grid;
+    place-items: center;
     text-align: center;
+    color: #fff;
 }
 
-.hero-content h1 {
+.hero-title {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.hero-content p {
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.hero-text {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-.hero-buttons .btn {
-    padding: 0.75rem 1.5rem;
-    border: none;
+/* Services Section */
+.services-section {
+    background-color: rgba(234, 244, 246, 1);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    color: #00305B;
+    margin-bottom: 1rem;
+}
+
+.service ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service li {
+    margin-bottom: 0.5rem;
+}
+
+/* Vision Section */
+.vision-section {
+    background-color: rgb(0, 48, 91);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.vision-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+}
+
+.vision-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: rgb(240, 240, 240);
+    padding: 3rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    color: rgb(0, 48, 91);
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: rgb(0, 48, 91);
     text-decoration: none;
-    font-size: 1rem;
-    margin: 0 0.5rem;
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary {
+    padding: 1rem 2rem;
+    background-color: #FFDB58;
+    color: rgb(0, 48, 91);
+    font-weight: bold;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.primary-btn {
-    background: #f4a261;
-    color: #fff;
-}
-
-.primary-btn:hover {
-    background: #e76f51;
-}
-
-.secondary-btn {
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-}
-
-.secondary-btn:hover {
-    background: #fff;
-    color: #222;
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer */
@@ -113,45 +227,96 @@ body {
     font-size: 0.875rem;
 }
 
-
-/* Logo and Business Name Styling */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* Space between the logo and text */
+/* Media Queries */
+@media (max-width: 768px) {
+    .services-section {
+        grid-template-columns: 1fr;
+    }
 }
 
-.logo-image {
-    height: 1.5em; /* Matches the font size of the text */
-    width: auto;   /* Maintains the aspect ratio */
-    vertical-align: middle; /* Aligns the logo with the text */
+//////////
+
+/* Section styling */
+.testimonial-section {
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
-.business-name {
-    font-size: 1.5rem; /* Adjust text size */
-    font-weight: bold;
-    color: #fff; /* Adjust for your theme */
+/* Wrapper styling */
+.review-carousel-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Left arrow, carousel, right arrow */
+  align-items: center;
+  max-width: 800px; /* Total width of the visible area */
+  margin: 0 auto;
+  overflow: hidden; /* Prevent overflow outside the visible area */
+  position: relative;
+  box-sizing: border-box;
 }
 
-
-
-html {
-    scroll-behavior: smooth;
+/* Section styling */
+.testimonial-section {
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
-.grid-item {
-    position: relative; /* Ensure ::before is positioned relative to the grid item */
+/* Wrapper styling */
+.review-carousel-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Left arrow, carousel, right arrow */
+  align-items: center;
+  max-width: 800px; /* Total width of the visible area */
+  margin: 0 auto;
+  overflow: hidden; /* Prevent overflow outside the visible area */
+  position: relative;
 }
 
-/*.grid-item::before {
-    content: ""; /* Adds a custom square bullet */
-    width: 10px; /* Size of the square */
-    height: 10px;
-    background-color: #333; /* Color of the bullet */
-    position: absolute;
-    top: 50%; /* Align vertically */
-    left: -20px; /* Offset horizontally to the left of the item */
-    transform: translateY(-50%); /* Centers the bullet vertically */
-    border-radius: 2px; /* Optional: Slightly round the corners for a modern look */
-}*/
+/* Arrow containers styling */
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.carousel-prev,
+.carousel-next {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1; /* Ensure buttons are above other elements */
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: #f0f0f0;
+}
+
+/* Carousel container */
+.carousel-container {
+  overflow: hidden; /* Prevent overflow from the carousel */
+}
+
+.review-carousel {
+  display: flex;
+  gap: 10px; /* Space between cards */
+  transition: transform 0.5s ease-in-out; /* Smooth scrolling effect */
+}
+
+/* Card styling */
+.review-card {
+  flex: 0 0 calc((100% - 20px) / 3); /* Fit 3 cards perfectly within the carousel */
+  max-width: calc((100% - 20px) / 3);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-sizing: border-box; /* Include padding and border in width */
+  text-align: center;
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
