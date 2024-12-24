@@ -267,7 +267,7 @@ html {
   display: grid;
   grid-template-columns: auto 1fr auto; /* Left arrow, carousel, right arrow */
   align-items: center;
-  max-width: 800px; /* Total width of the visible area */
+  max-width: 1400px; /* Total width of the visible area */
   margin: 0 auto;
   overflow: hidden; /* Prevent overflow outside the visible area */
   position: relative;
@@ -290,6 +290,14 @@ html {
   z-index: 1; /* Ensure buttons are above other elements */
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-prev {
+    left: -50px; /* Move left arrow further to the side */
+}
+
+.carousel-next {
+    right: -50px; /* Move right arrow further to the side */
 }
 
 .carousel-prev:hover,
@@ -319,6 +327,7 @@ html {
   text-align: center;
   border-radius: 8px; /* Optional: Rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+  margin-right: -10px;
 }
 
 
