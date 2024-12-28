@@ -37,7 +37,7 @@
                         <!-- Dropdown Menu -->
                         <div class="dropdown-menu">
                             <!-- <a href="about.html">Katerina Miller</a> -->
-                            <a href="#aboutKaterinaMiller">about Katerina</a>
+                            <a href="#aboutKaterinaMiller">About Katerina</a>
                             <a href="#ourVision">Our Vision</a>
                             <a href="#testimonials">Testimonials</a>
                         </div>
@@ -91,7 +91,7 @@ white-space: nowrap;">
 <!-- Free Consultation Button -->
 <button id="freeConsultationButton" style="
 padding: 0.5rem 1rem; 
-background-color: #C8971A;
+background-color: #ffb81c;
 /*background-color: #FFDB58; */
 color: black; 
 font-weight:bold; 
@@ -129,10 +129,10 @@ border-radius: 8px;">
                             <input id="email" name="email" type="email" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;" required>
                         </div>
                         <div style="margin-bottom: 1rem;">
-                            <label for="claim" style="display: block; font-size: 0.9rem; font-weight: bold;">Tell us about your situation</label>
+                            <label for="claim" style="display: block; font-size: 0.9rem; font-weight: bold;">Your Message</label>
                             <textarea id="claim" name="claim" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; height: 160px;" required></textarea>
                         </div>
-                        <button type="submit" style="padding: 0.5rem 1rem; background-color: #FFDB58; color: black; font-weight: bold; border: none; cursor: pointer; font-size: 1rem; border-radius: 4px;">
+                        <button type="submit" style="padding: 0.5rem 1rem; background-color: #ffb81c; color: black; font-weight: bold; border: none; cursor: pointer; font-size: 1rem; border-radius: 4px;">
                             Submit
                         </button>
                     </form>
@@ -159,18 +159,18 @@ border-radius: 8px;">
             <div></div>
             <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left;">
                 <div style="margin-bottom: 0.5rem; width: 100%;">
-                    <h1 style="font-size: 2.3rem; margin: 0; padding-bottom: 0rem;">TERMINATED?</h1>
-                    <h1 style="font-size: 2.1rem; font-weight: 500; margin: 0;">DISABILITY CLAIM DENIED?</h1>
+                    <h1 style="font-size: 2.3rem; margin: 0; padding-bottom: 0rem;">YOU DON'T HAVE TO NAVIGATE IT ALONE</h1>
+                    <h1 style="font-size: 1.5rem; font-weight: bolder; margin: 0;">Terminated?</h1>
                 </div>
                     <!-- <div style="margin-bottom: 0.5rem; width: 100%;">
                         <p style="font-size: 2.5rem; line-height: 1.2; font-weight: 500; margin: 0;">LAW FIRM</p>
                     </div> -->
                     <div style="width: 100%;">
-                        <p style="font-size: 1.4rem; line-height: 1.8; font-weight: bolder; margin: 0;"x>
-                            You don't have to navigate it alone.
+                        <p style="font-size: 1.5rem; line-height: 1.8; font-weight: bolder; margin: 0;"x>
+                            Disability Claim Denied?
                         </p>
                         <p style="font-size: 1.2rem; line-height: 1.8; font-weight: 300; margin: 0;">
-                            We help employees resolve workplace issues & assist with denied disability benefits claims. 
+                            We help employees resolve workplace issues & assist with denied disability benefits claims
                         </p>
                     </div>
                 </div>
@@ -178,15 +178,15 @@ border-radius: 8px;">
 
         </section>
     </div>
-    <section id="services" style="display: grid; grid-template-columns: 46% 54%; gap: 2rem; align-items: stretch; padding: 0; gap: 0; ">
+    <section class="services-section" id="services">
         <!-- Left Column -->
-        <div style="color: white; background-color: rgba(234, 244, 246, 1); padding: 2rem; border-radius: 0; height: 100%; width: 100%; box-sizing: border-box; display: grid; grid-template-columns: 1fr 2fr; align-items: center;">
+        <div class="service-left">
             <!-- Empty Section -->
-            <div></div>
+            <div class="empty-div"></div>
             <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left;">
                 <!-- BOUTIQUE -->
                 <div style="margin-bottom: 0.5rem; width: 100%;">
-                    <h1 style="font-size: 2.5rem; margin: 0; color: rgba(3,49,93,1); font-weight: bold;">PRACTICE</h1>
+                    <h1 style="font-size: 2.5rem; margin: 0; color: rgba(3,49,93,1); font-weight: bold;">PRACTICE</ h1>
                 </div>
                 <!-- LAW FIRM -->
                 <div style="margin-bottom: 0.5rem; width: 100%;">
@@ -195,11 +195,13 @@ border-radius: 8px;">
                 <!-- Specializing Text -->
             </div>
         </div>
-        <div style="display: flex; justify-content: space-between; gap: 2rem; padding: 2rem;">
+        <div class="service-right" style="display: flex; justify-content: space-between; gap: 2rem; padding: 2rem;">
             <!-- Employment Law Column -->
             <div style="flex: 1;">
-                <h3 style="margin-bottom: 1rem; font-size: 1.5rem; color: #00305B;">Employment Law</h3>
-                <ul style="list-style-type: none; padding: 0; margin: 0; font-size: 1.2rem;">
+                <h3 style="margin-bottom: 1rem; font-size: 1.5rem; color: #00305B;">
+                <i class="fa-solid fa-check" style="color: #ffb81c;"></i>    
+                Employment Law</h3>
+                <ul style="list-style-type: none; padding: 0 0 0 2rem; margin: 0; font-size: 1.2rem;">
                     <li style="margin-bottom: 0.5rem;">Severance Pay</li>
                     <li style="margin-bottom: 0.5rem;">Wrongful Dismissal</li>
                     <li style="margin-bottom: 0.5rem;">Constructive Dismissal</li>
@@ -217,8 +219,10 @@ border-radius: 8px;">
 
             <!-- Disability Benefits Column -->
             <div style="flex: 1;">
-                <h3 style="margin-bottom: 1rem; font-size: 1.5rem; color: #00305B;">Disability Benefits</h3>
-                <ul style="list-style-type: none; padding: 0; margin: 0; font-size:1.2rem">
+                <h3 style="margin-bottom: 1rem; font-size: 1.5rem; color: #00305B;">
+                <i class="fa-solid fa-check" style="color: #ffb81c;"></i>
+                Disability Benefits</h3>
+                <ul style="list-style-type: none; padding: 0 0 0 2rem; margin: 0; font-size:1.2rem">
                     <li style="margin-bottom: 0.5rem;">Short- Term Disability</li>
                     <li style="margin-bottom: 0.5rem;">Long- Term Disability</li>
                     <li style="margin-bottom: 0.5rem;">Critical Illness</li>
@@ -255,22 +259,22 @@ border-radius: 8px;">
 
 
 <!-- About Section -->
-<section id="aboutKaterinaMiller" style="background-color: rgb(234, 244, 246); color: black; padding: 2rem; text-align: center;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+<section id="aboutKaterinaMiller" style="background-color: rgb(234, 244, 246); color: black; padding: 0rem; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 2rem 2rem 0rem 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
         <!-- Picture Column -->
-        <div style="flex: 1; max-width: 50%; padding: 1rem;">
-            <img src="images/katerinaMiller1.jpeg" alt="About Us Image" style="width: 100%; height: auto; border-radius: 10px;">
+        <div style="flex: 1; max-width: 50%; padding: 0rem;">
+            <img src="images/katerinaMiller1_no_bg.png" alt="About Us Image" style="width: 58%; height: auto; border-radius: 10px;">
         </div>
 
         <!-- Text Column -->
         <div style="flex: 1; max-width: 50%; padding: 1rem; text-align: left;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; font-weight: normal;">Katerina Miller</h2>
-            <h3 style="font-size: 1.8rem; margin-bottom: 1rem; font-weight: bold;">Principal</h3>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; font-weight: bold;">Katerina Miller</h2>
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem; font-weight: normal;">Principal</h3>
             <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem;">
                 Katerina Miller is a dedicated Toronto-based employment and disability lawyer. Before founding K. MILLER LAW, she refined her advocacy skills at a leading Toronto firm, earning a strong reputation for professionalism, compassion, and tenacity in securing the best outcomes for her clients.
             </p>
             <a href="about.html" style="display: inline-block; padding: 0.75rem 2rem; background-color: rgb(0, 48, 91); color: white; text-decoration: none; border-radius: 5px; font-size: 1.2rem;">
-                About
+                Read More
             </a>
         </div>
     </div>
@@ -281,9 +285,14 @@ border-radius: 8px;">
 
 
    <section id="testimonials" class="testimonial-section">
-    <div style="display: grid; grid-template-rows: auto auto; gap: 20px; width: 100%;">
-    <div style="text-align: center; background-color: #f4f4f4; padding: 20px;">
-    <h2>Our Google Reviews</h2>
+    <div style="display: grid; grid-template-rows: auto auto; gap: 10px; width: 100%; padding: 0rem 0rem 2rem 0rem">
+    <div style="text-align: center; background-color: /*#f4f4f4*/white; padding: 1rem; ">
+    <!-- <h2 style="border: 1px solid #ccc;">Our Google Reviews</h2> -->
+    <h2 style=" background-color: white; padding: 10px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); font-weight: bold; color: #333;">
+Our
+<img src="images/googleIcon_no_bg.png" alt="Google Icon" style="height: 32px; vertical-align: middle;">
+Reviews
+</h2>
   </div>
   <div class="review-carousel-wrapper">
     <div class="arrow-container">
@@ -362,45 +371,75 @@ border-radius: 8px;">
 
 
 
-
-    <section id="contact" style="background-color: rgb(240, 240, 240);background: url('images/contactBackground.jpeg') no-repeat center center/cover; padding: 3rem 1rem;">
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 3fr 3fr 1fr; gap: 2rem; align-items: start;">
-            <!-- Contact Info -->
-            <div style="text-align: left;">
-                <h2 style="font-size: 2rem; color: rgb(0, 48, 91); margin-bottom: 1rem;">Contact Us</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Address:</strong> 1234 King Street, Suite 100, Toronto</p>
-                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Phone:</strong> <a href="tel:4162770366" style="color: rgb(0, 48, 91); text-decoration: none;">(416) 277-0366</a></p>
-                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:info@kmillerlaw.com" style="color: rgb(0, 48, 91); text-decoration: none;">info@kmillerlaw.com</a></p>
-                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Operating Hours:</strong> Monday-Friday, 9:00 am – 5:00 pm</p>
-            </div>
-
-            <!-- Google Map -->
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.5057660765556!2d-79.4129377231627!3d43.76235907109716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2d1a96f444b7%3A0xd1f6fe2e87b764ca!2sWorkhaus%20Coworking%20%26%20Office%20Space!5e0!3m2!1sen!2sca!4v1734493703656!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <!-- Free Consultation Button -->
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <button id="freeConsultationContactButton" style="
-                padding: 1rem 2rem; 
-                background-color: #C8971A; 
-                /*background-color: #FFDB58; */
-                color: rgb(0, 48, 91); 
-                font-weight: bold; 
-                font-size: 1.25rem; 
-                border: none; 
-                border-radius: 25px; 
-                cursor: pointer; 
-                text-transform: uppercase;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                transition: transform 0.2s, box-shadow 0.2s;" 
-                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';" 
-                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
-                Free Consultation
-            </button>
-        </div>
+        
+<section id="contact" style="
+  background-color: rgb(240, 240, 240);
+  background: url('images/contactBackground.jpeg') no-repeat center center/cover;
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: 46% 54%;
+  align-items: stretch;
+  padding: 0;
+">
+  <!-- Left Column -->
+  <div style="
+    background-color: rgba(0, 48, 91, 0.8);
+    color: #fff;
+    padding: 2rem;
+">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Contact Us</h2>
+    <!-- Contact Info -->
+    <div style="text-align: left;">
+        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Address:</strong> 1234 King Street, Suite 100, Toronto</p>
+        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Phone:</strong> 
+            <a href="tel:4162770366" style="color: #ffcc00; text-decoration: none;">(416) 277-0366</a>
+        </p>
+        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Email:</strong> 
+            <a href="mailto:info@kmillerlaw.com" style="color: #ffcc00; text-decoration: none;">info@kmillerlaw.com</a>
+        </p>
+        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Operating Hours:</strong> Monday-Friday, 9:00 am – 5:00 pm</p>
     </div>
+</div>
+
+
+  <!-- Right Column -->
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 3fr 3fr 1fr; gap: 2rem; align-items: start; padding: 2rem;">
+    <!-- Contact Info -->
+    <!-- <div style="text-align: left;">
+      <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Address:</strong> 1234 King Street, Suite 100, Toronto</p>
+      <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Phone:</strong> <a href="tel:4162770366" style="color: rgb(0, 48, 91); text-decoration: none;">(416) 277-0366</a></p>
+      <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:info@kmillerlaw.com" style="color: rgb(0, 48, 91); text-decoration: none;">info@kmillerlaw.com</a></p>
+      <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Operating Hours:</strong> Monday-Friday, 9:00 am – 5:00 pm</p>
+    </div> -->
+
+    <!-- Google Map -->
+    <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.5057660765556!2d-79.4129377231627!3d43.76235907109716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2d1a96f444b7%3A0xd1f6fe2e87b764ca!2sWorkhaus%20Coworking%20%26%20Office%20Space!5e0!3m2!1sen!2sca!4v1734493703656!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Free Consultation Button -->
+    <div style="display: flex; align-items: center; justify-content: right; padding-top: 15rem;">
+      <button id="freeConsultationContactButton" style="
+        padding: 1rem 2rem; 
+        background-color: #ffb81c; 
+        /*background-color: #FFDB58; */
+        color: rgb(0, 48, 91); 
+        font-weight: bold; 
+        font-size: 1.25rem; 
+        border: none; 
+        border-radius: 25px; 
+        cursor: pointer; 
+        text-transform: uppercase;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;" 
+        onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';" 
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+        Free Consultation
+      </button>
+    </div>
+  </div>
 </section>
+
 
 
 

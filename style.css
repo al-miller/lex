@@ -236,12 +236,7 @@ html {
 
 //////////
 
-/* Section styling */
-.testimonial-section {
-  padding: 2rem 0;
-  background-color: #f9f9f9;
-  text-align: center;
-}
+
 
 /* Wrapper styling */
 .review-carousel-wrapper {
@@ -257,8 +252,9 @@ html {
 
 /* Section styling */
 .testimonial-section {
-  padding: 2rem 0;
-  background-color: #f9f9f9;
+  padding: 0rem 0rem 0rem 0rem;
+/*  background-color: #f9f9f9;*/
+background-color: white;
   text-align: center;
 }
 
@@ -271,6 +267,7 @@ html {
   margin: 0 auto;
   overflow: hidden; /* Prevent overflow outside the visible area */
   position: relative;
+
 }
 
 /* Arrow containers styling */
@@ -322,7 +319,7 @@ html {
   max-width: calc((100% - 20px) / 3);
   background-color: #fff;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   box-sizing: border-box; /* Include padding and border in width */
   text-align: center;
   border-radius: 8px; /* Optional: Rounded corners */
@@ -339,3 +336,93 @@ html {
     display: flex; /* Ensure stars align properly */
     justify-content: center; /* Center align stars horizontally */
 }
+
+
+
+
+
+
+
+
+/*mobile*/
+
+.services-section {
+    display: grid;
+    grid-template-columns: 46% 54%;
+    gap: 2rem;
+    align-items: stretch;
+    padding: 0;
+}
+
+.service-left {
+    color: white;
+    background-color: rgba(234, 244, 246, 1);
+    padding: 2rem;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    text-align: left; /* Added this to left-align the text */
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .services-section {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 4fr;
+        align-items: normal;
+    }
+
+    .service-left { 
+    text-align: left; /* Added this to left-align the text */
+    }
+
+    .empty-div {
+        display: none;
+    }
+}
+
+
+
+
+.service-right {
+    /* styles for right column */
+}
+
+
+
+
+
+/*.flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .column1 {
+            flex: 2; 
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 5px;
+            text-align: center;
+        }
+        .column2 {
+            flex: 1; 
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 5px;
+            text-align: center;
+        }
+*/
+
+
+
+
+/*        #freeConsultationContactButton.active {
+  background-color: #ff9900;
+}*/
