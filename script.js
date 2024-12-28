@@ -30,6 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    document.addEventListener('click', (e) => {
+    if (
+        contactFormPanel.style.display === 'block' && // Check if the form is visible
+        !contactFormPanel.contains(e.target) && // Click is outside the form
+        ![consultationButton, contactButton].includes(e.target) // Click is not on any toggle button
+    ) {
+        contactFormPanel.style.display = 'none'; // Close the form
+    }
+});
+
     // Handle Form Submission via AJAX
     const contactForm = document.getElementById('contactForm');
 
